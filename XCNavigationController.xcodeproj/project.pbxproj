@@ -13,6 +13,10 @@
 		3B78FA611CC781E900B4AA0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B78FA5F1CC781E900B4AA0A /* Main.storyboard */; };
 		3B78FA631CC781E900B4AA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B78FA621CC781E900B4AA0A /* Assets.xcassets */; };
 		3B78FA661CC781E900B4AA0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B78FA641CC781E900B4AA0A /* LaunchScreen.storyboard */; };
+		3B78FA701CC7829700B4AA0A /* XCNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B78FA6F1CC7829700B4AA0A /* XCNavigationViewController.m */; };
+		3B78FA731CC782FB00B4AA0A /* XCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B78FA721CC782FB00B4AA0A /* XCRootViewController.m */; };
+		3B78FA771CC783CB00B4AA0A /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B78FA751CC783CB00B4AA0A /* TestViewController.m */; };
+		3B78FA781CC783CB00B4AA0A /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B78FA761CC783CB00B4AA0A /* TestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		3B78FA621CC781E900B4AA0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B78FA651CC781E900B4AA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B78FA671CC781E900B4AA0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B78FA6E1CC7829700B4AA0A /* XCNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCNavigationViewController.h; sourceTree = "<group>"; };
+		3B78FA6F1CC7829700B4AA0A /* XCNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCNavigationViewController.m; sourceTree = "<group>"; };
+		3B78FA711CC782FB00B4AA0A /* XCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCRootViewController.h; sourceTree = "<group>"; };
+		3B78FA721CC782FB00B4AA0A /* XCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCRootViewController.m; sourceTree = "<group>"; };
+		3B78FA741CC783CB00B4AA0A /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		3B78FA751CC783CB00B4AA0A /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		3B78FA761CC783CB00B4AA0A /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,10 @@
 		3B78FA551CC781E900B4AA0A /* XCNavigationController */ = {
 			isa = PBXGroup;
 			children = (
+				3B78FA741CC783CB00B4AA0A /* TestViewController.h */,
+				3B78FA751CC783CB00B4AA0A /* TestViewController.m */,
+				3B78FA761CC783CB00B4AA0A /* TestViewController.xib */,
+				3B78FA6D1CC7825B00B4AA0A /* Classes */,
 				3B78FA591CC781E900B4AA0A /* AppDelegate.h */,
 				3B78FA5A1CC781E900B4AA0A /* AppDelegate.m */,
 				3B78FA5C1CC781E900B4AA0A /* ViewController.h */,
@@ -77,6 +92,17 @@
 				3B78FA571CC781E900B4AA0A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B78FA6D1CC7825B00B4AA0A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3B78FA6E1CC7829700B4AA0A /* XCNavigationViewController.h */,
+				3B78FA6F1CC7829700B4AA0A /* XCNavigationViewController.m */,
+				3B78FA711CC782FB00B4AA0A /* XCRootViewController.h */,
+				3B78FA721CC782FB00B4AA0A /* XCRootViewController.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +165,7 @@
 			files = (
 				3B78FA661CC781E900B4AA0A /* LaunchScreen.storyboard in Resources */,
 				3B78FA631CC781E900B4AA0A /* Assets.xcassets in Resources */,
+				3B78FA781CC783CB00B4AA0A /* TestViewController.xib in Resources */,
 				3B78FA611CC781E900B4AA0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,7 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B78FA771CC783CB00B4AA0A /* TestViewController.m in Sources */,
+				3B78FA731CC782FB00B4AA0A /* XCRootViewController.m in Sources */,
 				3B78FA5E1CC781E900B4AA0A /* ViewController.m in Sources */,
+				3B78FA701CC7829700B4AA0A /* XCNavigationViewController.m in Sources */,
 				3B78FA5B1CC781E900B4AA0A /* AppDelegate.m in Sources */,
 				3B78FA581CC781E900B4AA0A /* main.m in Sources */,
 			);
@@ -265,6 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = XCNavigationController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.novel-supertv.XCNavigationController";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = XCNavigationController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.novel-supertv.XCNavigationController";
 				PRODUCT_NAME = "$(TARGET_NAME)";
