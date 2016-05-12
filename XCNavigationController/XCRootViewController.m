@@ -8,7 +8,8 @@
 
 #import "XCRootViewController.h"
 
-@interface XCRootViewController () <UINavigationControllerDelegate>
+
+@interface XCRootViewController () <UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 
 @end
 
@@ -30,15 +31,37 @@ static XCRootViewController *_sharedInstance;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.delegate = self;
-    self.interactivePopGestureRecognizer.delegate = nil;
+    
+    id target = self.interactivePopGestureRecognizer.delegate;
+    
+    // 创建全屏滑动手势，调用系统自带滑动手势的target的action方法
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:@selector(handleNavigationTransition:)];
+    
+    // 设置手势代理，拦截手势触发
+    pan.delegate = self;
+    
+    // 给导航控制器的view添加全屏滑动手势
+    [self.view addGestureRecognizer:pan];
+    
+    // 禁止使用系统自带的滑动手势
+    self.interactivePopGestureRecognizer.enabled = NO;
+    
 }
 
-- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+//去除警告。。
+- (void)handleNavigationTransition:(UIGestureRecognizer *)ges
 {
-    BOOL isRootVC = viewController == navigationController.viewControllers.firstObject;
-    navigationController.interactivePopGestureRecognizer.enabled = !isRootVC;
+    
 }
 
-
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    // 注意：只有非根控制器才有滑动返回功能，根控制器没有。
+    // 判断导航控制器是否只有一个子控制器，如果只有一个子控制器，肯定是根控制器
+    if (self.childViewControllers.count == 1) {
+        // 表示用户在根控制器界面，就不需要触发滑动手势，
+        return NO;
+    }
+    return YES;
+}
 @end
